@@ -1,6 +1,6 @@
 const blogUser = require("../Models/user.model")
 
-const create5 = async (req,res)=>{
+const create7 = async (req,res)=>{
     try {
         const user = await blogUser.findOne({
             username : req.body.username,
@@ -39,7 +39,7 @@ const create5 = async (req,res)=>{
     }
 }
 
-const read5 = async (req,res)=>{
+const read7 = async (req,res)=>{
     try {
         const newuser = await blogUser.find();
         if(newuser){
@@ -57,7 +57,7 @@ const read5 = async (req,res)=>{
     }
 }
 
-const delet5 = async (req,res)=>{
+const delet7 = async (req,res)=>{
     try {
         const id = req.params.id
         const userdelete = await blogUser.deleteOne({
@@ -77,7 +77,7 @@ const delet5 = async (req,res)=>{
     }
 }
 
-const update5 = async (req,res)=>{
+const update7 = async (req,res)=>{
     try {
         const id = req.params.id
         const username = req.body.username
@@ -110,4 +110,4 @@ const update5 = async (req,res)=>{
 }
 
 
-module.exports = {create5,read5,delet5,update5}
+module.exports = {create7,read7,delet7,update7}
